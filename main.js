@@ -40,25 +40,48 @@ let output = {};
 for (let i=0; i<subreddits.length; i++) {
 
     let subreddit = subreddits[i];
+    output[subreddit] = {
+        numberGilds: 0
+    };
 
-    let numberGuilds = 0;
-    let subscribers = 0;
-
-    var requestOptions = {
+    var getPostsRequestOptions = {
         host: `www.reddit.com`,
         method: 'GET',
         port:443,
         path: `/r/${subreddit}/.json`
     };
 
-    let requestPromise = issueHttpRequest(requestOptions).then((subredditInfo) => {
-        output[subreddit] = {
-            numberGuilds: numberGuilds,
-            subscribers: subscribers
+    let getPostsRequestPromise = issueHttpRequest(getPostsRequestOptions).then((subredditInfo) => {
+
+        let posts = subredditInfo.data.children;
+
+        for(let j=0; j<posts.length; j++) {
+            let post = posts[j];
+            try {
+                output[subreddit]["numberGilds"] += Number(post.data.gilded);
+            } catch(error) {
+                console.log("Could not parse gild property. Moving along");
+            }
         }
     });
 
-    allRequestPromises.push(requestPromise);
+    allRequestPromises.push(getPostsRequestPromise);
+
+    var getSubscribersRequestOptions = {
+        host: `www.reddit.com`,
+        method: 'GET',
+        port:443,
+        path: `/r/${subreddit}/about.json`
+    };
+
+    let getSubscribersRequestPromise = issueHttpRequest(getSubscribersRequestOptions).then((subredditInfo) => {        
+        output[subreddit]["subscribers"] = subredditInfo.data.subscribers;
+        output[subreddit]["accounts_active"] = subredditInfo.data.accounts_active;
+        output[subreddit]["accounts_active_is_fuzzed"] = subredditInfo.data.accounts_active_is_fuzzed;
+    });
+
+    allRequestPromises.push(getSubscribersRequestPromise);
+
 }
 
 Promise.all(allRequestPromises).then(() => {
