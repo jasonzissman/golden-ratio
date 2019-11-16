@@ -1,4 +1,12 @@
-const subreddits = ["news", "funny", "politics"];
+const topSubreddits = ["announcements", "funny", "AskRddit", "gaming", "pics", "sciences", "worldnews", "aww",
+    "movies", "todayilearned", "videos", "Music", "IAmA", "news", "gifs", "EarthPorn", "Showerthoughts",
+    "askscience", "blog", "Jokes", "explainlikeimfive", "books", "food", "LifeProTips", "DIY", "mildlyinteresting",
+    "Art", "sports", "space", "gadgets", "nottheonion", "television", "photoshopbattles", "Documentaries", "GetMotivated",
+    "listentothis", "UpliftingNews", "tifu", "InternetIsBeautiful", "history", "Futurology", "philosophy", "OldSchoolCool",
+    "WritingPrompts", "personalfinance", "dataisbeautiful", "nosleep", "creepy", "TwoXChromosomes", "technology",
+    "AdviceAnimals", "Fitness", "memes", "WTF", "wholesomememes", "politics", "bestof", "interestingasfuck", "BlackPeopleTwitter",
+    "oddlysatisfying"];
+    
 const https = require("https");
 
 function issueHttpRequest(params) {
@@ -41,9 +49,9 @@ function issueHttpRequest(params) {
 let allRequestPromises = [];
 let output = {};
 
-for (let i = 0; i < subreddits.length; i++) {
+for (let i = 0; i < topSubreddits.length; i++) {
 
-    let subreddit = subreddits[i];
+    let subreddit = topSubreddits[i];
     output[subreddit] = {
         numberGilds: 0
     };
@@ -91,7 +99,7 @@ for (let i = 0; i < subreddits.length; i++) {
 Promise.all(allRequestPromises).then(() => {
 
     for (const subreddit in output) {
-        output[subreddit]["goldenRatio"] = output[subreddit]["numberGilds"] / (output[subreddit]["subscribers"]/1000000);
+        output[subreddit]["goldenRatio"] = output[subreddit]["numberGilds"] / (output[subreddit]["subscribers"] / 1000000);
     }
 
     console.log("Results")
