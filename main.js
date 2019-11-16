@@ -105,7 +105,7 @@ Promise.all(allRequestPromises).then(() => {
         output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 1000000);
     }
 
-    const fileName = new Date().toDateString().replace(/\ /g, '-');
+    const fileName = "results/" + new Date().toDateString().replace(/\ /g, '-');
     console.log("Writing results to file");
     fs.writeFileSync(fileName, output);
     console.log("Results")
