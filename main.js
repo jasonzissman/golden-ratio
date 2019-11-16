@@ -9,7 +9,8 @@ const topSubreddits = ["announcements", "funny", "AskRddit", "gaming", "pics", "
     "WritingPrompts", "personalfinance", "dataisbeautiful", "nosleep", "creepy", "TwoXChromosomes", "technology",
     "AdviceAnimals", "Fitness", "memes", "WTF", "wholesomememes", "politics", "bestof", "interestingasfuck", "BlackPeopleTwitter",
     "oddlysatisfying"];
-    
+
+   
 function issueHttpRequest(params) {
 
     // TODO - put in throttle here so that we only have X active requests simultaneously.
@@ -17,6 +18,9 @@ function issueHttpRequest(params) {
     // there are less than 10 active.
 
     return new Promise(function (resolve, reject) {
+
+
+
         var req = https.request(params, function (res) {
 
             if (res.statusCode < 200 || res.statusCode >= 300) {
@@ -110,9 +114,8 @@ Promise.all(allRequestPromises).then(() => {
 
     const fileName = "results\\" + new Date().toDateString().replace(/\ /g, '-') + ".json";
     console.log("Writing results to file");
-    fs.writeFileSync(JSON.stringify(fileName), output);
+    fs.writeFileSync(fileName, JSON.stringify(output, null, 2));
     console.log("Results")
-
     console.log(JSON.stringify(output, null, 2));
 }).catch((error) => {
     console.log("SOMETHING WENT WRONG!")
