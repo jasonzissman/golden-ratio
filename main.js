@@ -49,8 +49,11 @@ function issueHttpRequest(params) {
 
 let allRequestPromises = [];
 let output = {
+    subreddits:{},
     timestamp: new Date().getTime()
 };
+
+console.log("Starting to process subreddits");
 
 for (let i = 0; i < topSubreddits.length; i++) {
 
@@ -105,9 +108,9 @@ Promise.all(allRequestPromises).then(() => {
         output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 1000000);
     }
 
-    const fileName = "results/" + new Date().toDateString().replace(/\ /g, '-');
+    const fileName = "results\\" + new Date().toDateString().replace(/\ /g, '-') + ".json";
     console.log("Writing results to file");
-    fs.writeFileSync(fileName, output);
+    fs.writeFileSync(JSON.stringify(fileName), output);
     console.log("Results")
 
     console.log(JSON.stringify(output, null, 2));
