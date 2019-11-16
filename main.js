@@ -3,6 +3,10 @@ const https = require("https");
 
 function issueHttpRequest(params) {
 
+    // TODO - put in throttle here so that we only have X active requests simultaneously.
+    // Consider returning a promise that actually executes the HTTP request when
+    // there are less than 10 active.
+
     return new Promise(function (resolve, reject) {
         var req = https.request(params, function (res) {
 
@@ -37,7 +41,7 @@ function issueHttpRequest(params) {
 let allRequestPromises = [];
 let output = {};
 
-for (let i=0; i<subreddits.length; i++) {
+for (let i = 0; i < subreddits.length; i++) {
 
     let subreddit = subreddits[i];
     output[subreddit] = {
@@ -47,7 +51,7 @@ for (let i=0; i<subreddits.length; i++) {
     var getPostsRequestOptions = {
         host: `www.reddit.com`,
         method: 'GET',
-        port:443,
+        port: 443,
         path: `/r/${subreddit}/.json`
     };
 
@@ -55,11 +59,11 @@ for (let i=0; i<subreddits.length; i++) {
 
         let posts = subredditInfo.data.children;
 
-        for(let j=0; j<posts.length; j++) {
+        for (let j = 0; j < posts.length; j++) {
             let post = posts[j];
             try {
                 output[subreddit]["numberGilds"] += Number(post.data.gilded);
-            } catch(error) {
+            } catch (error) {
                 console.log("Could not parse gild property. Moving along");
             }
         }
@@ -70,11 +74,11 @@ for (let i=0; i<subreddits.length; i++) {
     var getSubscribersRequestOptions = {
         host: `www.reddit.com`,
         method: 'GET',
-        port:443,
+        port: 443,
         path: `/r/${subreddit}/about.json`
     };
 
-    let getSubscribersRequestPromise = issueHttpRequest(getSubscribersRequestOptions).then((subredditInfo) => {        
+    let getSubscribersRequestPromise = issueHttpRequest(getSubscribersRequestOptions).then((subredditInfo) => {
         output[subreddit]["subscribers"] = subredditInfo.data.subscribers;
         output[subreddit]["accounts_active"] = subredditInfo.data.accounts_active;
         output[subreddit]["accounts_active_is_fuzzed"] = subredditInfo.data.accounts_active_is_fuzzed;
@@ -85,6 +89,11 @@ for (let i=0; i<subreddits.length; i++) {
 }
 
 Promise.all(allRequestPromises).then(() => {
+
+    for (const subreddit in output) {
+        output[subreddit]["goldenRatio"] = output[subreddit]["numberGilds"] / (output[subreddit]["subscribers"]/1000000);
+    }
+
     console.log("Results")
     console.log(JSON.stringify(output, null, 2));
 }).catch((error) => {
