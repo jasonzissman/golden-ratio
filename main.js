@@ -1,3 +1,6 @@
+const fs = require('fs');
+const https = require("https");
+
 const topSubreddits = ["announcements", "funny", "AskRddit", "gaming", "pics", "sciences", "worldnews", "aww",
     "movies", "todayilearned", "videos", "Music", "IAmA", "news", "gifs", "EarthPorn", "Showerthoughts",
     "askscience", "blog", "Jokes", "explainlikeimfive", "books", "food", "LifeProTips", "DIY", "mildlyinteresting",
@@ -7,8 +10,6 @@ const topSubreddits = ["announcements", "funny", "AskRddit", "gaming", "pics", "
     "AdviceAnimals", "Fitness", "memes", "WTF", "wholesomememes", "politics", "bestof", "interestingasfuck", "BlackPeopleTwitter",
     "oddlysatisfying"];
     
-const https = require("https");
-
 function issueHttpRequest(params) {
 
     // TODO - put in throttle here so that we only have X active requests simultaneously.
@@ -47,12 +48,14 @@ function issueHttpRequest(params) {
 }
 
 let allRequestPromises = [];
-let output = {};
+let output = {
+    timestamp: new Date().getTime()
+};
 
 for (let i = 0; i < topSubreddits.length; i++) {
 
     let subreddit = topSubreddits[i];
-    output[subreddit] = {
+    output["subreddits"][subreddit] = {
         numberGilds: 0
     };
 
@@ -70,7 +73,7 @@ for (let i = 0; i < topSubreddits.length; i++) {
         for (let j = 0; j < posts.length; j++) {
             let post = posts[j];
             try {
-                output[subreddit]["numberGilds"] += Number(post.data.gilded);
+                output["subreddits"][subreddit]["numberGilds"] += Number(post.data.gilded);
             } catch (error) {
                 console.log("Could not parse gild property. Moving along");
             }
@@ -87,9 +90,9 @@ for (let i = 0; i < topSubreddits.length; i++) {
     };
 
     let getSubscribersRequestPromise = issueHttpRequest(getSubscribersRequestOptions).then((subredditInfo) => {
-        output[subreddit]["subscribers"] = subredditInfo.data.subscribers;
-        output[subreddit]["accounts_active"] = subredditInfo.data.accounts_active;
-        output[subreddit]["accounts_active_is_fuzzed"] = subredditInfo.data.accounts_active_is_fuzzed;
+        output["subreddits"][subreddit]["subscribers"] = subredditInfo.data.subscribers;
+        output["subreddits"][subreddit]["accounts_active"] = subredditInfo.data.accounts_active;
+        output["subreddits"][subreddit]["accounts_active_is_fuzzed"] = subredditInfo.data.accounts_active_is_fuzzed;
     });
 
     allRequestPromises.push(getSubscribersRequestPromise);
@@ -98,11 +101,15 @@ for (let i = 0; i < topSubreddits.length; i++) {
 
 Promise.all(allRequestPromises).then(() => {
 
-    for (const subreddit in output) {
-        output[subreddit]["goldenRatio"] = output[subreddit]["numberGilds"] / (output[subreddit]["subscribers"] / 1000000);
+    for (const subreddit in output["subreddits"]) {
+        output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 1000000);
     }
 
+    const fileName = new Date().toDateString().replace(/\ /g, '-');
+    console.log("Writing results to file");
+    fs.writeFileSync(fileName, output);
     console.log("Results")
+
     console.log(JSON.stringify(output, null, 2));
 }).catch((error) => {
     console.log("SOMETHING WENT WRONG!")
