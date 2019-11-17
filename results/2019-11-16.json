@@ -5,7 +5,7 @@
       "subscribers": 47502044,
       "accounts_active": 697,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.863120753288006
+      "goldenRatio": 8.63120753288006
     },
     "funny": {
       "numberGilds": 0,
@@ -19,35 +19,35 @@
       "subscribers": 24127555,
       "accounts_active": 36422,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.04144638775043721
+      "goldenRatio": 0.4144638775043721
     },
     "pics": {
       "numberGilds": 4,
       "subscribers": 23172865,
       "accounts_active": 17479,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.17261568649366402
+      "goldenRatio": 1.7261568649366402
     },
     "worldnews": {
       "numberGilds": 3,
       "subscribers": 22495512,
       "accounts_active": 25933,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.13335993419487407
+      "goldenRatio": 1.3335993419487407
     },
     "aww": {
       "numberGilds": 8,
       "subscribers": 22449911,
       "accounts_active": 29675,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.3563488514497897
+      "goldenRatio": 3.563488514497897
     },
     "movies": {
       "numberGilds": 1,
       "subscribers": 21771530,
       "accounts_active": 12193,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.04593154454464156
+      "goldenRatio": 0.4593154454464156
     },
     "todayilearned": {
       "numberGilds": 0,
@@ -61,7 +61,7 @@
       "subscribers": 21554377,
       "accounts_active": 16396,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.23197144598519365
+      "goldenRatio": 2.3197144598519365
     },
     "Music": {
       "numberGilds": 0,
@@ -75,56 +75,56 @@
       "subscribers": 19540775,
       "accounts_active": 8539,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.2558752147752584
+      "goldenRatio": 2.558752147752584
     },
     "news": {
       "numberGilds": 2,
       "subscribers": 19270914,
       "accounts_active": 22802,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.1037833493522933
+      "goldenRatio": 1.037833493522933
     },
     "gifs": {
       "numberGilds": 3,
       "subscribers": 19211571,
       "accounts_active": 14271,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.1561558916759072
+      "goldenRatio": 1.561558916759072
     },
     "EarthPorn": {
       "numberGilds": 1,
       "subscribers": 18858260,
       "accounts_active": 43386,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.053027161572700765
+      "goldenRatio": 0.53027161572700765
     },
     "Showerthoughts": {
       "numberGilds": 1,
       "subscribers": 18752320,
       "accounts_active": 14316,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.053326735038651214
+      "goldenRatio": 0.53326735038651214
     },
     "askscience": {
       "numberGilds": 2,
       "subscribers": 18273417,
       "accounts_active": 5100,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.10944860504195796
+      "goldenRatio": 1.0944860504195796
     },
     "blog": {
       "numberGilds": 13,
       "subscribers": 17434924,
       "accounts_active": 128,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.7456298633707839
+      "goldenRatio": 7.456298633707839
     },
     "Jokes": {
       "numberGilds": 5,
       "subscribers": 17402093,
       "accounts_active": 11241,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.28732176066407644
+      "goldenRatio": 2.8732176066407644
     },
     "explainlikeimfive": {
       "numberGilds": 0,
@@ -152,7 +152,7 @@
       "subscribers": 16870786,
       "accounts_active": 5068,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.1778221832699437
+      "goldenRatio": 1.778221832699437
     },
     "DIY": {
       "numberGilds": 0,
@@ -173,7 +173,7 @@
       "subscribers": 16544067,
       "accounts_active": 3702,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.3022231474280176
+      "goldenRatio": 3.022231474280176
     },
     "sports": {
       "numberGilds": 0,
@@ -187,14 +187,14 @@
       "subscribers": 16058138,
       "accounts_active": 12509,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.062273720651796614
+      "goldenRatio": 0.62273720651796614
     },
     "gadgets": {
       "numberGilds": 1,
       "subscribers": 16013071,
       "accounts_active": 2059,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.06244898308388191
+      "goldenRatio": 0.6244898308388191
     },
     "nottheonion": {
       "numberGilds": 0,
@@ -229,7 +229,7 @@
       "subscribers": 15317841,
       "accounts_active": 1094,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.26113340646374383
+      "goldenRatio": 2.6113340646374383
     },
     "listentothis": {
       "numberGilds": 0,
@@ -250,14 +250,14 @@
       "subscribers": 14963199,
       "accounts_active": 8441,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.20049188679506302
+      "goldenRatio": 2.0049188679506302
     },
     "InternetIsBeautiful": {
       "numberGilds": 2,
       "subscribers": 14477581,
       "accounts_active": 152,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.138144625127637
+      "goldenRatio": 1.38144625127637
     },
     "history": {
       "numberGilds": 0,
@@ -271,7 +271,7 @@
       "subscribers": 14260908,
       "accounts_active": 8067,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.42073057339686926
+      "goldenRatio": 4.2073057339686926
     },
     "philosophy": {
       "numberGilds": 0,
@@ -285,7 +285,7 @@
       "subscribers": 14172978,
       "accounts_active": 5743,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.2116704054715953
+      "goldenRatio": 2.116704054715953
     },
     "WritingPrompts": {
       "numberGilds": 0,
@@ -299,42 +299,42 @@
       "subscribers": 13982943,
       "accounts_active": 9824,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.14303140619253044
+      "goldenRatio": 1.4303140619253044
     },
     "dataisbeautiful": {
       "numberGilds": 1,
       "subscribers": 13936585,
       "accounts_active": 6075,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.07175358956300988
+      "goldenRatio": 0.7175358956300988
     },
     "nosleep": {
       "numberGilds": 3,
       "subscribers": 13592721,
       "accounts_active": 3361,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.22070636188295192
+      "goldenRatio": 2.2070636188295192
     },
     "creepy": {
       "numberGilds": 3,
       "subscribers": 13305112,
       "accounts_active": 9253,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.2254772451370571
+      "goldenRatio": 2.254772451370571
     },
     "TwoXChromosomes": {
       "numberGilds": 4,
       "subscribers": 12529148,
       "accounts_active": 4008,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.31925554714494553
+      "goldenRatio": 3.1925554714494553
     },
     "technology": {
       "numberGilds": 1,
       "subscribers": 8278711,
       "accounts_active": 2796,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.12079175127625545
+      "goldenRatio": 1.2079175127625545
     },
     "AdviceAnimals": {
       "numberGilds": 0,
@@ -348,21 +348,21 @@
       "subscribers": 7535323,
       "accounts_active": 3696,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.39812493771003576
+      "goldenRatio": 3.9812493771003576
     },
     "memes": {
       "numberGilds": 2,
       "subscribers": 6947736,
       "accounts_active": 24521,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.28786355727966634
+      "goldenRatio": 2.8786355727966634
     },
     "WTF": {
       "numberGilds": 1,
       "subscribers": 5940357,
       "accounts_active": 6972,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.16834005094306623
+      "goldenRatio": 1.6834005094306623
     },
     "wholesomememes": {
       "numberGilds": 0,
@@ -376,21 +376,21 @@
       "subscribers": 5537200,
       "accounts_active": 34449,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 1.4447735317488983
+      "goldenRatio": 14.447735317488983
     },
     "bestof": {
       "numberGilds": 2,
       "subscribers": 5153489,
       "accounts_active": 799,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.38808659531435885
+      "goldenRatio": 3.8808659531435885
     },
     "interestingasfuck": {
       "numberGilds": 1,
       "subscribers": 4479637,
       "accounts_active": 13474,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.22323237351597908
+      "goldenRatio": 2.2323237351597908
     },
     "BlackPeopleTwitter": {
       "numberGilds": 0,
@@ -404,7 +404,7 @@
       "subscribers": 3633858,
       "accounts_active": 8655,
       "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0.5503792388145051
+      "goldenRatio": 5.503792388145051
     }
   },
   "timestamp": 1573955014799

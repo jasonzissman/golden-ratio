@@ -50,7 +50,7 @@ Promise.all(allRequestPromises).then(() => {
     
     logger.log("All HTTP responses received. Computing golden ratio for each subreddit.")
     for (const subreddit in output["subreddits"]) {
-        output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 1000000);
+        output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 10000000);
     }
 
     const fileName = "results\\" + new Date().toISOString().split('T')[0] + ".json";
