@@ -1,5 +1,7 @@
 const fs = require('fs');
-const https = require("https");
+const httpHelper = require('./helpers/http-helper');
+const redditDataHelper= require('./helpers/reddit-data-helper');
+const logger = require('./helpers/log-helper');
 
 const topSubreddits = ["announcements", "funny", "AskRddit", "gaming", "pics", "sciences", "worldnews", "aww",
     "movies", "todayilearned", "videos", "Music", "IAmA", "news", "gifs", "EarthPorn", "Showerthoughts",
@@ -10,54 +12,11 @@ const topSubreddits = ["announcements", "funny", "AskRddit", "gaming", "pics", "
     "AdviceAnimals", "Fitness", "memes", "WTF", "wholesomememes", "politics", "bestof", "interestingasfuck", "BlackPeopleTwitter",
     "oddlysatisfying"];
 
-   
-function issueHttpRequest(params) {
-
-    // TODO - put in throttle here so that we only have X active requests simultaneously.
-    // Consider returning a promise that actually executes the HTTP request when
-    // there are less than 10 active.
-
-    return new Promise(function (resolve, reject) {
-
-
-
-        var req = https.request(params, function (res) {
-
-            if (res.statusCode < 200 || res.statusCode >= 300) {
-                return reject(new Error('statusCode=' + res.statusCode));
-            }
-
-            var body = [];
-            res.on('data', function (chunk) {
-                body.push(chunk);
-            });
-
-            res.on('end', function () {
-                try {
-                    body = JSON.parse(Buffer.concat(body).toString());
-                } catch (e) {
-                    console.log("Failed to parse JSON response");
-                    reject(e);
-                }
-                resolve(body);
-            });
-        });
-
-        req.on('error', function (err) {
-            reject(err);
-        });
-
-        req.end();
-    });
-}
-
 let allRequestPromises = [];
 let output = {
     subreddits:{},
     timestamp: new Date().getTime()
 };
-
-console.log("Starting to process subreddits");
 
 for (let i = 0; i < topSubreddits.length; i++) {
 
@@ -66,6 +25,7 @@ for (let i = 0; i < topSubreddits.length; i++) {
         numberGilds: 0
     };
 
+    // Get number of gilds on current top posts
     var getPostsRequestOptions = {
         host: `www.reddit.com`,
         method: 'GET',
@@ -73,22 +33,12 @@ for (let i = 0; i < topSubreddits.length; i++) {
         path: `/r/${subreddit}/.json`
     };
 
-    let getPostsRequestPromise = issueHttpRequest(getPostsRequestOptions).then((subredditInfo) => {
-
+    allRequestPromises.push(httpHelper.issueHttpRequest(getPostsRequestOptions).then((subredditInfo) => {
         let posts = subredditInfo.data.children;
-
-        for (let j = 0; j < posts.length; j++) {
-            let post = posts[j];
-            try {
-                output["subreddits"][subreddit]["numberGilds"] += Number(post.data.gilded);
-            } catch (error) {
-                console.log("Could not parse gild property. Moving along");
-            }
-        }
-    });
-
-    allRequestPromises.push(getPostsRequestPromise);
-
+        output["subreddits"][subreddit]["numberGilds"] = redditDataHelper.countNumberGildsInPosts(posts);
+    }));
+   
+    // Get general subreddit info
     var getSubscribersRequestOptions = {
         host: `www.reddit.com`,
         method: 'GET',
@@ -96,28 +46,31 @@ for (let i = 0; i < topSubreddits.length; i++) {
         path: `/r/${subreddit}/about.json`
     };
 
-    let getSubscribersRequestPromise = issueHttpRequest(getSubscribersRequestOptions).then((subredditInfo) => {
+    let getSubscribersRequestPromise = httpHelper.issueHttpRequest(getSubscribersRequestOptions).then((subredditInfo) => {
         output["subreddits"][subreddit]["subscribers"] = subredditInfo.data.subscribers;
         output["subreddits"][subreddit]["accounts_active"] = subredditInfo.data.accounts_active;
         output["subreddits"][subreddit]["accounts_active_is_fuzzed"] = subredditInfo.data.accounts_active_is_fuzzed;
     });
 
     allRequestPromises.push(getSubscribersRequestPromise);
-
 }
 
+logger.log("All HTTP requests sent. Waiting for responses.")
 Promise.all(allRequestPromises).then(() => {
-
+    
+    logger.log("All HTTP responses received. Computing golden ratio for each subreddit.")
     for (const subreddit in output["subreddits"]) {
         output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 1000000);
     }
 
-    const fileName = "results\\" + new Date().toDateString().replace(/\ /g, '-') + ".json";
-    console.log("Writing results to file");
+    const fileName = "results\\" + new Date().toISOString().split('T')[0] + ".json";
+    
+    logger.log("Processing complete. Writing results to " + fileName);
     fs.writeFileSync(fileName, JSON.stringify(output, null, 2));
-    console.log("Results")
-    console.log(JSON.stringify(output, null, 2));
+    
+    logger.log("Results written.")
+    
 }).catch((error) => {
-    console.log("SOMETHING WENT WRONG!")
-    console.log(JSON.stringify(error, null, 2));
+    logger.log("Something went wrong. Aborting!")
+    logger.log(JSON.stringify(error, null, 2));
 });
