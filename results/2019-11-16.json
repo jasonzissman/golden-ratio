@@ -14,13 +14,6 @@
       "accounts_active_is_fuzzed": false,
       "goldenRatio": 0
     },
-    "AskRddit": {
-      "numberGilds": 0,
-      "subscribers": 45,
-      "accounts_active": 11,
-      "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0
-    },
     "gaming": {
       "numberGilds": 1,
       "subscribers": 24127555,
@@ -34,13 +27,6 @@
       "accounts_active": 17479,
       "accounts_active_is_fuzzed": false,
       "goldenRatio": 0.17261568649366402
-    },
-    "sciences": {
-      "numberGilds": 0,
-      "subscribers": 107463,
-      "accounts_active": 222,
-      "accounts_active_is_fuzzed": false,
-      "goldenRatio": 0
     },
     "worldnews": {
       "numberGilds": 3,

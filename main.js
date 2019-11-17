@@ -1,26 +1,16 @@
 const fs = require('fs');
 const httpHelper = require('./helpers/http-helper');
-const redditDataHelper= require('./helpers/reddit-data-helper');
+const redditDataHelper = require('./helpers/reddit-data-helper');
 const logger = require('./helpers/log-helper');
-
-const topSubreddits = ["announcements", "funny", "AskRddit", "gaming", "pics", "sciences", "worldnews", "aww",
-    "movies", "todayilearned", "videos", "Music", "IAmA", "news", "gifs", "EarthPorn", "Showerthoughts",
-    "askscience", "blog", "Jokes", "explainlikeimfive", "books", "food", "LifeProTips", "DIY", "mildlyinteresting",
-    "Art", "sports", "space", "gadgets", "nottheonion", "television", "photoshopbattles", "Documentaries", "GetMotivated",
-    "listentothis", "UpliftingNews", "tifu", "InternetIsBeautiful", "history", "Futurology", "philosophy", "OldSchoolCool",
-    "WritingPrompts", "personalfinance", "dataisbeautiful", "nosleep", "creepy", "TwoXChromosomes", "technology",
-    "AdviceAnimals", "Fitness", "memes", "WTF", "wholesomememes", "politics", "bestof", "interestingasfuck", "BlackPeopleTwitter",
-    "oddlysatisfying"];
-
 let allRequestPromises = [];
 let output = {
     subreddits:{},
     timestamp: new Date().getTime()
 };
 
-for (let i = 0; i < topSubreddits.length; i++) {
+for (let i = 0; i < redditDataHelper.topSubreddits.length; i++) {
 
-    let subreddit = topSubreddits[i];
+    let subreddit = redditDataHelper.topSubreddits[i];
     output["subreddits"][subreddit] = {
         numberGilds: 0
     };
