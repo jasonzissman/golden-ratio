@@ -6,7 +6,7 @@ const filename = "log.txt";
 
 module.exports = {
     log: function(message) {
-        let messageWithDate = ts.timestamp() + " ::: " + message;
+        let messageWithDate = ts.fullTimestamp() + " ::: " + message;
         console.log(messageWithDate);
         logFilePromiseChain = logFilePromiseChain.then(fs.appendFile(filename, messageWithDate + "\r\n"));
     }

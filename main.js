@@ -58,9 +58,7 @@ let executeMainRoutine = () => {
             output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 10000000);
         }
     
-        // new Date().toLocaleString( 'sv', { timeZoneName: 'short' } );
-        // produces "2019-10-30 15:33:47 GMT−4"
-        const fileName = "results\\" + ts.timestamp() + ".json";
+        const fileName = "results\\" + ts.dateOnlyTimestamp() + ".json";
         
         logger.log("Processing complete. Writing results to " + fileName);
         fs.writeFileSync(fileName, JSON.stringify(output, null, 2));
@@ -85,3 +83,4 @@ executeMainRoutine().catch((error) => {
         }); 
     }); 
 });
+

@@ -63,6 +63,6 @@ for (let i = 0; i < redditDataHelper.topSubreddits.length; i++) {
     }
 }
 
-const fileName = "result-reformatters\\golden-ratio-by-day\\" + ts.timestamp() + ".csv";
+const fileName = "result-reformatters\\golden-ratio-by-day\\" + ts.dateOnlyTimestamp() + ".csv";
 logger.log("Processing complete. Writing results to " + fileName);
 fs.writeFileSync(fileName, csvString);
