@@ -12,6 +12,7 @@ gaming,0.04144638775043721
 
 const fs = require('fs');
 const logger = require('../helpers/log-helper');
+const ts = require("../helpers/timestamp-helper");
 const redditDataHelper = require('../helpers/reddit-data-helper');
 
 // 1. Get filenames for all results
@@ -62,7 +63,7 @@ for (let i = 0; i < redditDataHelper.topSubreddits.length; i++) {
     csvString += csvDataContainer[subreddit];
 }
 
-const fileName = "result-reformatters\\golden-ratio-all-time\\" + new Date().toISOString().split('T')[0] + ".csv";
+const fileName = "result-reformatters\\golden-ratio-all-time\\" + ts.timestamp() + ".csv";
 logger.log("Processing complete. Writing results to " + fileName);
 
 fs.writeFileSync(fileName, csvString);

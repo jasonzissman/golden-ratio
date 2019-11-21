@@ -1,4 +1,5 @@
 const fs = require('fs');
+const ts = require("./helpers/timestamp-helper");
 const httpHelper = require('./helpers/http-helper');
 const redditDataHelper = require('./helpers/reddit-data-helper');
 const logger = require('./helpers/log-helper');
@@ -57,7 +58,9 @@ let executeMainRoutine = () => {
             output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 10000000);
         }
     
-        const fileName = "results\\" + new Date().toISOString().split('T')[0] + ".json";
+        // new Date().toLocaleString( 'sv', { timeZoneName: 'short' } );
+        // produces "2019-10-30 15:33:47 GMT−4"
+        const fileName = "results\\" + ts.timestamp() + ".json";
         
         logger.log("Processing complete. Writing results to " + fileName);
         fs.writeFileSync(fileName, JSON.stringify(output, null, 2));

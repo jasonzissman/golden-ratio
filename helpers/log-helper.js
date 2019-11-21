@@ -1,5 +1,13 @@
+const fs = require('fs').promises;
+const ts = require("./timestamp-helper");
+
+let logFilePromiseChain = Promise.resolve();
+const filename = "log.txt";
+
 module.exports = {
     log: function(message) {
-        console.log(new Date().toUTCString() + " ::: " + message);
+        let messageWithDate = ts.timestamp() + " ::: " + message;
+        console.log(messageWithDate);
+        logFilePromiseChain = logFilePromiseChain.then(fs.appendFile(filename, messageWithDate + "\r\n"));
     }
 };

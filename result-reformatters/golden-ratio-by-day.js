@@ -18,6 +18,7 @@ gaming                 0.04144638775043721 xxxx        xxxx        xxxx
 *****/
 
 const fs = require('fs');
+const ts = require("../helpers/timestamp-helper");
 const logger = require('../helpers/log-helper');
 const redditDataHelper = require('../helpers/reddit-data-helper');
 
@@ -62,6 +63,6 @@ for (let i = 0; i < redditDataHelper.topSubreddits.length; i++) {
     }
 }
 
-const fileName = "result-reformatters\\golden-ratio-by-day\\" + new Date().toISOString().split('T')[0] + ".csv";
+const fileName = "result-reformatters\\golden-ratio-by-day\\" + ts.timestamp() + ".csv";
 logger.log("Processing complete. Writing results to " + fileName);
 fs.writeFileSync(fileName, csvString);
