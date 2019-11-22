@@ -4,6 +4,9 @@ const httpHelper = require('./helpers/http-helper');
 const redditDataHelper = require('./helpers/reddit-data-helper');
 const logger = require('./helpers/log-helper');
 
+const workingDirectory = process.argv[1].split("main.js")[0];
+logger.setLogFilenameAndPath(workingDirectory + "log.txt");
+
 let executeMainRoutine = () => {
 
     let allRequestPromises = [];
@@ -58,7 +61,7 @@ let executeMainRoutine = () => {
             output["subreddits"][subreddit]["goldenRatio"] = output["subreddits"][subreddit]["numberGilds"] / (output["subreddits"][subreddit]["subscribers"] / 10000000);
         }
     
-        const fileName = "results\\" + ts.dateOnlyTimestamp() + ".json";
+        const fileName = workingDirectory + "results\\" + ts.dateOnlyTimestamp() + ".json";
         
         logger.log("Processing complete. Writing results to " + fileName);
         fs.writeFileSync(fileName, JSON.stringify(output, null, 2));
