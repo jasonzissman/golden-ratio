@@ -38,6 +38,7 @@ allResultFileNames.forEach((filename) => {
 });
 
 // 3. Add data rows to CSV-compatible object
+let numberOfValidEntries = {};
 let csvDataContainer = {};
 let csvString = "Subreddit";
 
@@ -55,10 +56,16 @@ for(let i=0; i<timestamps.length; i++) {
         if (!csvDataContainer[timestamp]) {
             csvDataContainer[timestamp] = {};
         }
+        if (numberOfValidEntries[subreddit] === undefined) {
+            numberOfValidEntries[subreddit] = 0;
+        }
+        if (subreddits[subreddit].goldenRatio !== undefined) {
+            numberOfValidEntries[subreddit] += 1;
+        }
 
         let cumulativeValue = subreddits[subreddit].goldenRatio;
         if (priorTimestamp && csvDataContainer[priorTimestamp] !== undefined && csvDataContainer[priorTimestamp][subreddit] !== undefined && subreddits[subreddit].goldenRatio !== undefined) {
-            cumulativeValue = (i*csvDataContainer[priorTimestamp][subreddit] + subreddits[subreddit].goldenRatio) / (i+1);
+            cumulativeValue = ((numberOfValidEntries[subreddit]-1)*csvDataContainer[priorTimestamp][subreddit] + subreddits[subreddit].goldenRatio) / numberOfValidEntries[subreddit];
         } else if (priorTimestamp && csvDataContainer[priorTimestamp] !== undefined && csvDataContainer[priorTimestamp][subreddit] !== undefined) {
             cumulativeValue = csvDataContainer[priorTimestamp][subreddit];
         } 
