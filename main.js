@@ -15,9 +15,9 @@ let executeMainRoutine = () => {
         timestamp: new Date().getTime()
     };
     
-    for (let i = 0; i < redditDataHelper.topSubreddits.length; i++) {
+    for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
     
-        let subreddit = redditDataHelper.topSubreddits[i];
+        let subreddit = redditDataHelper.subredditsToMeasure[i];
         output["subreddits"][subreddit] = {
             numberGilds: 0
         };

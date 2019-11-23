@@ -55,8 +55,8 @@ for (let subreddit in csvDataContainer) {
 
 // 5. Save as CSV file
 let csvString = "Subreddit,averageGoldenRatio";
-for (let i = 0; i < redditDataHelper.topSubreddits.length; i++) {
-    let subreddit = redditDataHelper.topSubreddits[i];
+for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
+    let subreddit = redditDataHelper.subredditsToMeasure[i];
     csvString += "\r\n";
     csvString += subreddit;
     csvString += ",";
