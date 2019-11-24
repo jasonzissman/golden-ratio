@@ -8,5 +8,11 @@ In human-readable form, this equates to number of gilds per 10,000,000 subscribe
 
 To gather the data from reddit for today, run `node main.js`.
 
-To compute reports off the gathered data, run `node result-reformatters\golden-ratio-all-time.js` or `node result-reformatters\golden-ratio-by-day.js`.
+To compute CSV reports off the gathered data, run one of the reports:
 
+1. `node result-reformatters\golden-ratio-by-day-cumulative.js` (I think this is the most insightful)
+2. `node result-reformatters\golden-ratio-all-time.js`
+3. `node result-reformatters\golden-ratio-by-day.js`
+
+# Analysis of Results
+[2019-11-24 - Top 60 Most Subscribed](published-results/2019-11-24.md)
