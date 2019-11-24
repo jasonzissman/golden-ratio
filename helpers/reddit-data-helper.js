@@ -206,7 +206,7 @@ module.exports = {
         "socialskills"
     ],
 
-    countNumberGildsInPosts: function (posts) {
+    countNumberGildsInPosts: (posts) => {
         let numberGilds = 0;
         for (let j = 0; j < posts.length; j++) {
             let post = posts[j];
@@ -217,5 +217,10 @@ module.exports = {
             }
         }
         return numberGilds;
+    },
+
+    getFormattedSizeRange: (subscriberCount) => {
+        const lowerEnd = 5*Math.floor(subscriberCount/5000000);
+        return lowerEnd + "-" + (lowerEnd+5);
     }
 };

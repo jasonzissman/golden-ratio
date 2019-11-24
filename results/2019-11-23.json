@@ -1,0 +1,1412 @@
+{
+  "subreddits": {
+    "announcements": {
+      "numberGilds": 41,
+      "subscribers": 47816037,
+      "accounts_active": 626,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 8.574529085294124
+    },
+    "funny": {
+      "numberGilds": 3,
+      "subscribers": 27234064,
+      "accounts_active": 56544,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.1015616325202144
+    },
+    "AskReddit": {
+      "numberGilds": 1,
+      "subscribers": 25289386,
+      "accounts_active": 147089,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.3954228070226774
+    },
+    "gaming": {
+      "numberGilds": 6,
+      "subscribers": 24194942,
+      "accounts_active": 17374,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 2.4798571536149994
+    },
+    "pics": {
+      "numberGilds": 0,
+      "subscribers": 23216506,
+      "accounts_active": 26772,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "science": {
+      "numberGilds": 0,
+      "subscribers": 22741204,
+      "accounts_active": 14482,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "worldnews": {
+      "numberGilds": 3,
+      "subscribers": 22539594,
+      "accounts_active": 46808,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.330991143851127
+    },
+    "aww": {
+      "numberGilds": 2,
+      "subscribers": 22513581,
+      "accounts_active": 26570,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.8883526792117167
+    },
+    "movies": {
+      "numberGilds": 0,
+      "subscribers": 21805375,
+      "accounts_active": 13044,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "todayilearned": {
+      "numberGilds": 4,
+      "subscribers": 21784166,
+      "accounts_active": 32268,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.836196070118085
+    },
+    "videos": {
+      "numberGilds": 3,
+      "subscribers": 21590128,
+      "accounts_active": 20680,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.389523952799168
+    },
+    "Music": {
+      "numberGilds": 0,
+      "subscribers": 21599003,
+      "accounts_active": 4538,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "IAmA": {
+      "numberGilds": 10,
+      "subscribers": 19555902,
+      "accounts_active": 3706,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 5.113545772524326
+    },
+    "news": {
+      "numberGilds": 0,
+      "subscribers": 19305308,
+      "accounts_active": 20070,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "gifs": {
+      "numberGilds": 3,
+      "subscribers": 19234463,
+      "accounts_active": 14269,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.5597004189823236
+    },
+    "EarthPorn": {
+      "numberGilds": 1,
+      "subscribers": 18889651,
+      "accounts_active": 43757,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.5293904053600567
+    },
+    "Showerthoughts": {
+      "numberGilds": 2,
+      "subscribers": 18791649,
+      "accounts_active": 41719,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.0643025526924221
+    },
+    "askscience": {
+      "numberGilds": 1,
+      "subscribers": 18295617,
+      "accounts_active": 4091,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.5465789975817705
+    },
+    "blog": {
+      "numberGilds": 13,
+      "subscribers": 17444920,
+      "accounts_active": 114,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.452026148586523
+    },
+    "Jokes": {
+      "numberGilds": 2,
+      "subscribers": 17429105,
+      "accounts_active": 15906,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.1475058529970414
+    },
+    "explainlikeimfive": {
+      "numberGilds": 0,
+      "subscribers": 17322230,
+      "accounts_active": 5125,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "books": {
+      "numberGilds": 2,
+      "subscribers": 17275550,
+      "accounts_active": 3060,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.1577055433835681
+    },
+    "food": {
+      "numberGilds": 1,
+      "subscribers": 17117867,
+      "accounts_active": 3755,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.5841849337887717
+    },
+    "LifeProTips": {
+      "numberGilds": 8,
+      "subscribers": 16900071,
+      "accounts_active": 6003,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 4.733707923475587
+    },
+    "DIY": {
+      "numberGilds": 1,
+      "subscribers": 16730261,
+      "accounts_active": 2441,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.5977193063515267
+    },
+    "mildlyinteresting": {
+      "numberGilds": 0,
+      "subscribers": 16720681,
+      "accounts_active": 7791,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Art": {
+      "numberGilds": 2,
+      "subscribers": 16575162,
+      "accounts_active": 5869,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.2066247074990881
+    },
+    "sports": {
+      "numberGilds": 1,
+      "subscribers": 16291004,
+      "accounts_active": 3004,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.6138357095732099
+    },
+    "space": {
+      "numberGilds": 0,
+      "subscribers": 16084508,
+      "accounts_active": 4529,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "gadgets": {
+      "numberGilds": 1,
+      "subscribers": 16037821,
+      "accounts_active": 1077,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.6235261012078885
+    },
+    "nottheonion": {
+      "numberGilds": 3,
+      "subscribers": 15989827,
+      "accounts_active": 5520,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.87619290690262
+    },
+    "television": {
+      "numberGilds": 0,
+      "subscribers": 15810849,
+      "accounts_active": 7404,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "photoshopbattles": {
+      "numberGilds": 0,
+      "subscribers": 15553273,
+      "accounts_active": 6476,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Documentaries": {
+      "numberGilds": 2,
+      "subscribers": 15499664,
+      "accounts_active": 1332,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.2903505521151943
+    },
+    "GetMotivated": {
+      "numberGilds": 1,
+      "subscribers": 15343678,
+      "accounts_active": 3069,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.6517342191357248
+    },
+    "listentothis": {
+      "numberGilds": 0,
+      "subscribers": 15311869,
+      "accounts_active": 1004,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "UpliftingNews": {
+      "numberGilds": 0,
+      "subscribers": 15173527,
+      "accounts_active": 2879,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "tifu": {
+      "numberGilds": 11,
+      "subscribers": 14980529,
+      "accounts_active": 5815,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.342864861447817
+    },
+    "InternetIsBeautiful": {
+      "numberGilds": 2,
+      "subscribers": 14489064,
+      "accounts_active": 77,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.3803514153847343
+    },
+    "history": {
+      "numberGilds": 0,
+      "subscribers": 14398789,
+      "accounts_active": 4134,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Futurology": {
+      "numberGilds": 10,
+      "subscribers": 14273519,
+      "accounts_active": 10291,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.005980795625803
+    },
+    "philosophy": {
+      "numberGilds": 0,
+      "subscribers": 14256299,
+      "accounts_active": 464,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "OldSchoolCool": {
+      "numberGilds": 1,
+      "subscribers": 14186859,
+      "accounts_active": 4973,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.7048776617854593
+    },
+    "WritingPrompts": {
+      "numberGilds": 0,
+      "subscribers": 14057007,
+      "accounts_active": 2416,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "personalfinance": {
+      "numberGilds": 0,
+      "subscribers": 13991488,
+      "accounts_active": 7870,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "dataisbeautiful": {
+      "numberGilds": 1,
+      "subscribers": 13952399,
+      "accounts_active": 4304,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.7167226223963349
+    },
+    "nosleep": {
+      "numberGilds": 2,
+      "subscribers": 13607344,
+      "accounts_active": 4499,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.4697945462391486
+    },
+    "creepy": {
+      "numberGilds": 3,
+      "subscribers": 13322838,
+      "accounts_active": 975,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 2.251772482709765
+    },
+    "TwoXChromosomes": {
+      "numberGilds": 1,
+      "subscribers": 12537529,
+      "accounts_active": 10497,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0.7976053335549612
+    },
+    "technology": {
+      "numberGilds": 2,
+      "subscribers": 8296267,
+      "accounts_active": 10187,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 2.410722798579168
+    },
+    "AdviceAnimals": {
+      "numberGilds": 2,
+      "subscribers": 7883250,
+      "accounts_active": 2072,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 2.537024704278058
+    },
+    "Fitness": {
+      "numberGilds": 0,
+      "subscribers": 7544054,
+      "accounts_active": 3612,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "memes": {
+      "numberGilds": 1,
+      "subscribers": 7033755,
+      "accounts_active": 26554,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.4217157123044517
+    },
+    "WTF": {
+      "numberGilds": 0,
+      "subscribers": 5949755,
+      "accounts_active": 9155,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "wholesomememes": {
+      "numberGilds": 1,
+      "subscribers": 5697896,
+      "accounts_active": 6911,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 1.755033787910485
+    },
+    "politics": {
+      "numberGilds": 9,
+      "subscribers": 5553076,
+      "accounts_active": 42335,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 16.207233612505934
+    },
+    "bestof": {
+      "numberGilds": 0,
+      "subscribers": 5156383,
+      "accounts_active": 1117,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "interestingasfuck": {
+      "numberGilds": 1,
+      "subscribers": 4506711,
+      "accounts_active": 13091,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 2.2189130831775103
+    },
+    "BlackPeopleTwitter": {
+      "numberGilds": 0,
+      "subscribers": 3784176,
+      "accounts_active": 7838,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "oddlysatisfying": {
+      "numberGilds": 0,
+      "subscribers": 3659860,
+      "accounts_active": 7797,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "anime": {
+      "numberGilds": 6,
+      "subscribers": 1258594,
+      "accounts_active": 10438,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 47.67224378949844
+    },
+    "nba": {
+      "numberGilds": 2,
+      "subscribers": 2814038,
+      "accounts_active": 25406,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.107224564842409
+    },
+    "HongKong": {
+      "numberGilds": 5,
+      "subscribers": 412639,
+      "accounts_active": 7719,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 121.17129015919484
+    },
+    "leagueoflegends": {
+      "numberGilds": 3,
+      "subscribers": 3519112,
+      "accounts_active": 27057,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 8.524877866916427
+    },
+    "travel": {
+      "numberGilds": 0,
+      "subscribers": 3441087,
+      "accounts_active": 859,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "lifehacks": {
+      "numberGilds": 0,
+      "subscribers": 3386694,
+      "accounts_active": 977,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "facepalm": {
+      "numberGilds": 0,
+      "subscribers": 3082545,
+      "accounts_active": 4340,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "dankmemes": {
+      "numberGilds": 3,
+      "subscribers": 3057745,
+      "accounts_active": 17568,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 9.811151682040196
+    },
+    "pcmasterrace": {
+      "numberGilds": 3,
+      "subscribers": 3038827,
+      "accounts_active": 7865,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 9.872230304653737
+    },
+    "me_irl": {
+      "numberGilds": 1,
+      "subscribers": 2991702,
+      "accounts_active": 5311,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 3.3425789065889586
+    },
+    "NatureIsFuckingLit": {
+      "numberGilds": 0,
+      "subscribers": 2934730,
+      "accounts_active": 5988,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Tinder": {
+      "numberGilds": 2,
+      "subscribers": 2904699,
+      "accounts_active": 7387,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.885395009947675
+    },
+    "woahdude": {
+      "numberGilds": 3,
+      "subscribers": 2796171,
+      "accounts_active": 860,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 10.728957563754149
+    },
+    "PS4": {
+      "numberGilds": 1,
+      "subscribers": 2774620,
+      "accounts_active": 3474,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 3.6040971376260535
+    },
+    "AnimalsBeingBros": {
+      "numberGilds": 0,
+      "subscribers": 2749177,
+      "accounts_active": 2098,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Whatcouldgowrong": {
+      "numberGilds": 1,
+      "subscribers": 2706445,
+      "accounts_active": 7956,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 3.6948838790368916
+    },
+    "relationships": {
+      "numberGilds": 0,
+      "subscribers": 2697475,
+      "accounts_active": 4870,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "AnimalsBeingJerks": {
+      "numberGilds": 0,
+      "subscribers": 2694133,
+      "accounts_active": 746,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "tattoos": {
+      "numberGilds": 0,
+      "subscribers": 2662887,
+      "accounts_active": 849,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Overwatch": {
+      "numberGilds": 1,
+      "subscribers": 2607686,
+      "accounts_active": 3379,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 3.834817535546841
+    },
+    "FoodPorn": {
+      "numberGilds": 0,
+      "subscribers": 2542643,
+      "accounts_active": 1338,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "reactiongifs": {
+      "numberGilds": 0,
+      "subscribers": 2540347,
+      "accounts_active": 592,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "atheism": {
+      "numberGilds": 0,
+      "subscribers": 2505362,
+      "accounts_active": 3682,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "trippinthroughtime": {
+      "numberGilds": 0,
+      "subscribers": 2509484,
+      "accounts_active": 2110,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "BikiniBottomTwitter": {
+      "numberGilds": 1,
+      "subscribers": 2436656,
+      "accounts_active": 2585,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 4.103985133724251
+    },
+    "Unexpected": {
+      "numberGilds": 0,
+      "subscribers": 2392591,
+      "accounts_active": 7272,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "gonewild": {
+      "numberGilds": 5,
+      "subscribers": 2358990,
+      "accounts_active": 8041,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 21.19551163845544
+    },
+    "programming": {
+      "numberGilds": 0,
+      "subscribers": 2334960,
+      "accounts_active": 3669,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "PewdiepieSubmissions": {
+      "numberGilds": 0,
+      "subscribers": 2337213,
+      "accounts_active": 6236,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "gameofthrones": {
+      "numberGilds": 1,
+      "subscribers": 2293603,
+      "accounts_active": 1003,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 4.359952441638767
+    },
+    "boardgames": {
+      "numberGilds": 0,
+      "subscribers": 2243579,
+      "accounts_active": 1837,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "relationship_advice": {
+      "numberGilds": 3,
+      "subscribers": 2242144,
+      "accounts_active": 16874,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 13.380050523070775
+    },
+    "europe": {
+      "numberGilds": 2,
+      "subscribers": 2230278,
+      "accounts_active": 5586,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 8.96749194495036
+    },
+    "malefashionadvice": {
+      "numberGilds": 2,
+      "subscribers": 2225242,
+      "accounts_active": 4562,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 8.987786496929322
+    },
+    "gardening": {
+      "numberGilds": 0,
+      "subscribers": 2190188,
+      "accounts_active": 658,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Minecraft": {
+      "numberGilds": 3,
+      "subscribers": 2189799,
+      "accounts_active": 5803,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 13.699887523923428
+    },
+    "pokemongo": {
+      "numberGilds": 0,
+      "subscribers": 2175667,
+      "accounts_active": 2445,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "instant_regret": {
+      "numberGilds": 0,
+      "subscribers": 2124443,
+      "accounts_active": 294,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "photography": {
+      "numberGilds": 0,
+      "subscribers": 2078182,
+      "accounts_active": 873,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "dadjokes": {
+      "numberGilds": 0,
+      "subscribers": 2061549,
+      "accounts_active": 1886,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Games": {
+      "numberGilds": 2,
+      "subscribers": 2005710,
+      "accounts_active": 7361,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 9.971531278200738
+    },
+    "mildlyinfuriating": {
+      "numberGilds": 0,
+      "subscribers": 2005361,
+      "accounts_active": 2974,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "iphone": {
+      "numberGilds": 0,
+      "subscribers": 1974620,
+      "accounts_active": 1369,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Damnthatsinteresting": {
+      "numberGilds": 0,
+      "subscribers": 1971657,
+      "accounts_active": 5075,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "pokemon": {
+      "numberGilds": 0,
+      "subscribers": 1966616,
+      "accounts_active": 16330,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "loseit": {
+      "numberGilds": 0,
+      "subscribers": 1947060,
+      "accounts_active": 5446,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Android": {
+      "numberGilds": 0,
+      "subscribers": 1938127,
+      "accounts_active": 9120,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "itookapicture": {
+      "numberGilds": 0,
+      "subscribers": 1921990,
+      "accounts_active": 1662,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "CrappyDesign": {
+      "numberGilds": 0,
+      "subscribers": 1872900,
+      "accounts_active": 2277,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "nonononoyes": {
+      "numberGilds": 0,
+      "subscribers": 1853671,
+      "accounts_active": 2235,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "AnimalsBeingDerps": {
+      "numberGilds": 1,
+      "subscribers": 1848500,
+      "accounts_active": 2103,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 5.409791723018664
+    },
+    "rarepuppers": {
+      "numberGilds": 0,
+      "subscribers": 1840440,
+      "accounts_active": 1820,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "hiphopheads": {
+      "numberGilds": 1,
+      "subscribers": 1833152,
+      "accounts_active": 12674,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 5.455085012044828
+    },
+    "drawing": {
+      "numberGilds": 0,
+      "subscribers": 1830399,
+      "accounts_active": 496,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Wellthatsucks": {
+      "numberGilds": 0,
+      "subscribers": 1810460,
+      "accounts_active": 2666,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "GifRecipes": {
+      "numberGilds": 3,
+      "subscribers": 1784965,
+      "accounts_active": 5000,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 16.807052239119535
+    },
+    "slowcooking": {
+      "numberGilds": 1,
+      "subscribers": 1784416,
+      "accounts_active": 978,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 5.6040743862417735
+    },
+    "buildapc": {
+      "numberGilds": 0,
+      "subscribers": 1769724,
+      "accounts_active": 6277,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "ContagiousLaughter": {
+      "numberGilds": 0,
+      "subscribers": 1766640,
+      "accounts_active": 1147,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "humor": {
+      "numberGilds": 0,
+      "subscribers": 1756975,
+      "accounts_active": 74,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "soccer": {
+      "numberGilds": 11,
+      "subscribers": 1731307,
+      "accounts_active": 14044,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 63.53581427210772
+    },
+    "offmychest": {
+      "numberGilds": 1,
+      "subscribers": 1723092,
+      "accounts_active": 1740,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 5.803520647765761
+    },
+    "trashy": {
+      "numberGilds": 0,
+      "subscribers": 1724675,
+      "accounts_active": 6786,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "BetterEveryLoop": {
+      "numberGilds": 0,
+      "subscribers": 1709319,
+      "accounts_active": 5509,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "woodworking": {
+      "numberGilds": 1,
+      "subscribers": 1693374,
+      "accounts_active": 1231,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 5.90536998914593
+    },
+    "Eyebleach": {
+      "numberGilds": 0,
+      "subscribers": 1687858,
+      "accounts_active": 1942,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "confession": {
+      "numberGilds": 0,
+      "subscribers": 1686620,
+      "accounts_active": 1171,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "RoastMe": {
+      "numberGilds": 0,
+      "subscribers": 1657871,
+      "accounts_active": 7862,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "BeAmazed": {
+      "numberGilds": 1,
+      "subscribers": 1653457,
+      "accounts_active": 8936,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.047934721011795
+    },
+    "xboxone": {
+      "numberGilds": 0,
+      "subscribers": 1646137,
+      "accounts_active": 4341,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "nfl": {
+      "numberGilds": 0,
+      "subscribers": 1641855,
+      "accounts_active": 11347,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "cars": {
+      "numberGilds": 0,
+      "subscribers": 1625268,
+      "accounts_active": 3929,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "pcgaming": {
+      "numberGilds": 1,
+      "subscribers": 1618072,
+      "accounts_active": 2272,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.180194700853855
+    },
+    "MakeupAddiction": {
+      "numberGilds": 0,
+      "subscribers": 1617171,
+      "accounts_active": 1749,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Roadcam": {
+      "numberGilds": 4,
+      "subscribers": 1615271,
+      "accounts_active": 524,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 24.763646471706604
+    },
+    "ChoosingBeggars": {
+      "numberGilds": 0,
+      "subscribers": 1610664,
+      "accounts_active": 6523,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "keto": {
+      "numberGilds": 0,
+      "subscribers": 1602437,
+      "accounts_active": 2611,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "WatchPeopleDieInside": {
+      "numberGilds": 1,
+      "subscribers": 1605035,
+      "accounts_active": 8887,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.230393729731751
+    },
+    "HighQualityGifs": {
+      "numberGilds": 7,
+      "subscribers": 1593099,
+      "accounts_active": 767,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 43.939516627654655
+    },
+    "NetflixBestOf": {
+      "numberGilds": 1,
+      "subscribers": 1579066,
+      "accounts_active": 639,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.332857524637982
+    },
+    "YouShouldKnow": {
+      "numberGilds": 0,
+      "subscribers": 1579169,
+      "accounts_active": 1276,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "raspberry_pi": {
+      "numberGilds": 1,
+      "subscribers": 1574964,
+      "accounts_active": 320,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.3493514772401145
+    },
+    "teenagers": {
+      "numberGilds": 3,
+      "subscribers": 1571988,
+      "accounts_active": 10040,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 19.084115145917146
+    },
+    "cats": {
+      "numberGilds": 1,
+      "subscribers": 1569560,
+      "accounts_active": 1699,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.371212314279161
+    },
+    "OutOfTheLoop": {
+      "numberGilds": 0,
+      "subscribers": 1560940,
+      "accounts_active": 2878,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "EatCheapAndHealthy": {
+      "numberGilds": 0,
+      "subscribers": 1560333,
+      "accounts_active": 3043,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "ChildrenFallingOver": {
+      "numberGilds": 0,
+      "subscribers": 1557449,
+      "accounts_active": 428,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "nsfw": {
+      "numberGilds": 0,
+      "subscribers": 1549749,
+      "accounts_active": 3057,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "backpacking": {
+      "numberGilds": 0,
+      "subscribers": 1544218,
+      "accounts_active": 119,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "HumansBeingBros": {
+      "numberGilds": 2,
+      "subscribers": 1541286,
+      "accounts_active": 2019,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 12.976177036578544
+    },
+    "HistoryPorn": {
+      "numberGilds": 1,
+      "subscribers": 1533138,
+      "accounts_active": 289,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.522570049141042
+    },
+    "AmItheAsshole": {
+      "numberGilds": 1,
+      "subscribers": 1523332,
+      "accounts_active": 37432,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 6.564557168102554
+    },
+    "blackmagicfuckery": {
+      "numberGilds": 3,
+      "subscribers": 1521039,
+      "accounts_active": 1637,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 19.723360150528688
+    },
+    "PublicFreakout": {
+      "numberGilds": 0,
+      "subscribers": 1517876,
+      "accounts_active": 12942,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Parenting": {
+      "numberGilds": 3,
+      "subscribers": 1508030,
+      "accounts_active": 2630,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 19.89350344489168
+    },
+    "biology": {
+      "numberGilds": 0,
+      "subscribers": 1485742,
+      "accounts_active": 206,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "RealGirls": {
+      "numberGilds": 3,
+      "subscribers": 1486102,
+      "accounts_active": 3005,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 20.187039651383284
+    },
+    "MadeMeSmile": {
+      "numberGilds": 3,
+      "subscribers": 1470255,
+      "accounts_active": 2084,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 20.40462368772764
+    },
+    "NSFW_GIF": {
+      "numberGilds": 0,
+      "subscribers": 1466232,
+      "accounts_active": 4575,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "AskMen": {
+      "numberGilds": 0,
+      "subscribers": 1465150,
+      "accounts_active": 5939,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "NintendoSwitch": {
+      "numberGilds": 0,
+      "subscribers": 1456198,
+      "accounts_active": 5887,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "frugalmalefashion": {
+      "numberGilds": 0,
+      "subscribers": 1453427,
+      "accounts_active": 2882,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "insanepeoplefacebook": {
+      "numberGilds": 0,
+      "subscribers": 1447991,
+      "accounts_active": 7830,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "nevertellmetheodds": {
+      "numberGilds": 0,
+      "subscribers": 1446151,
+      "accounts_active": 1393,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "Cooking": {
+      "numberGilds": 0,
+      "subscribers": 1443219,
+      "accounts_active": 2959,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "youseeingthisshit": {
+      "numberGilds": 2,
+      "subscribers": 1445427,
+      "accounts_active": 2846,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 13.836741668724882
+    },
+    "trees": {
+      "numberGilds": 0,
+      "subscribers": 1439221,
+      "accounts_active": 3274,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "streetwear": {
+      "numberGilds": 0,
+      "subscribers": 1437511,
+      "accounts_active": 1968,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "MurderedByWords": {
+      "numberGilds": 4,
+      "subscribers": 1432964,
+      "accounts_active": 9285,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 27.91416951158578
+    },
+    "rickandmorty": {
+      "numberGilds": 1,
+      "subscribers": 1424200,
+      "accounts_active": 1957,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.021485746383935
+    },
+    "mac": {
+      "numberGilds": 0,
+      "subscribers": 1394263,
+      "accounts_active": 883,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "sex": {
+      "numberGilds": 0,
+      "subscribers": 1393263,
+      "accounts_active": 6423,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "DnD": {
+      "numberGilds": 1,
+      "subscribers": 1390897,
+      "accounts_active": 4766,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.189604981533499
+    },
+    "ArtisanVideos": {
+      "numberGilds": 0,
+      "subscribers": 1389637,
+      "accounts_active": 131,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "KidsAreFuckingStupid": {
+      "numberGilds": 0,
+      "subscribers": 1385835,
+      "accounts_active": 868,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "WhitePeopleTwitter": {
+      "numberGilds": 1,
+      "subscribers": 1382870,
+      "accounts_active": 6111,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.231337725165779
+    },
+    "recipes": {
+      "numberGilds": 0,
+      "subscribers": 1382796,
+      "accounts_active": 1443,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "therewasanattempt": {
+      "numberGilds": 0,
+      "subscribers": 1383102,
+      "accounts_active": 4388,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "hmmm": {
+      "numberGilds": 0,
+      "subscribers": 1371579,
+      "accounts_active": 3330,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "nextfuckinglevel": {
+      "numberGilds": 6,
+      "subscribers": 1375263,
+      "accounts_active": 8109,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 43.62801878622489
+    },
+    "IdiotsInCars": {
+      "numberGilds": 0,
+      "subscribers": 1352979,
+      "accounts_active": 3881,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "MovieDetails": {
+      "numberGilds": 0,
+      "subscribers": 1347228,
+      "accounts_active": 2232,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "NoStupidQuestions": {
+      "numberGilds": 0,
+      "subscribers": 1331099,
+      "accounts_active": 7125,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "nintendo": {
+      "numberGilds": 0,
+      "subscribers": 1328017,
+      "accounts_active": 1273,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "electronicmusic": {
+      "numberGilds": 0,
+      "subscribers": 1319550,
+      "accounts_active": 454,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "whatisthisthing": {
+      "numberGilds": 0,
+      "subscribers": 1297679,
+      "accounts_active": 4705,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "reallifedoodles": {
+      "numberGilds": 6,
+      "subscribers": 1298417,
+      "accounts_active": 200,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 46.21011585646214
+    },
+    "quityourbullshit": {
+      "numberGilds": 0,
+      "subscribers": 1292074,
+      "accounts_active": 1261,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "battlestations": {
+      "numberGilds": 0,
+      "subscribers": 1286506,
+      "accounts_active": 1789,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "scifi": {
+      "numberGilds": 0,
+      "subscribers": 1284435,
+      "accounts_active": 260,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "comics": {
+      "numberGilds": 1,
+      "subscribers": 1281331,
+      "accounts_active": 1128,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 7.8043846593893385
+    },
+    "Awwducational": {
+      "numberGilds": 0,
+      "subscribers": 1264834,
+      "accounts_active": 470,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "TrollYChromosome": {
+      "numberGilds": 0,
+      "subscribers": 1262412,
+      "accounts_active": 263,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "FiftyFifty": {
+      "numberGilds": 0,
+      "subscribers": 1254929,
+      "accounts_active": 1905,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "natureismetal": {
+      "numberGilds": 0,
+      "subscribers": 1255019,
+      "accounts_active": 10218,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "madlads": {
+      "numberGilds": 0,
+      "subscribers": 1247464,
+      "accounts_active": 1244,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "wow": {
+      "numberGilds": 1,
+      "subscribers": 1244547,
+      "accounts_active": 4486,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 8.035052111330469
+    },
+    "MealPrepSunday": {
+      "numberGilds": 6,
+      "subscribers": 1237981,
+      "accounts_active": 1953,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 48.46601038303496
+    },
+    "howto": {
+      "numberGilds": 0,
+      "subscribers": 1235788,
+      "accounts_active": 1573,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    },
+    "educationalgifs": {
+      "numberGilds": 2,
+      "subscribers": 1219963,
+      "accounts_active": 2847,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 16.393939816207542
+    },
+    "socialskills": {
+      "numberGilds": 0,
+      "subscribers": 1221393,
+      "accounts_active": 863,
+      "accounts_active_is_fuzzed": false,
+      "goldenRatio": 0
+    }
+  },
+  "timestamp": 1574559814438
+}

@@ -2,19 +2,19 @@
 // Flourish to create a bar chart race for the cumulative average each day.
 
 /**** Output should be CSV:
-Subreddit,2019-11-16,2019-11-17,2019-11-18,2019-11-19
-announcements,0.863120753288006,xxxx,xxxx,xxxx
-funny,0,xxxx,xxxx,xxxx
-AskReddit,0,xxxx,xxxx,xxxx
-gaming,0.04144638775043721,xxxx,xxxx,xxxx
+Subreddit,sizeRange,2019-11-16,2019-11-17,2019-11-18,2019-11-19
+announcements,10m+,0.863120753288006,xxxx,xxxx,xxxx
+funny,10m+,0,xxxx,xxxx,xxxx
+AskReddit,10m+,0,xxxx,xxxx,xxxx
+gaming,1m+,0.04144638775043721,xxxx,xxxx,xxxx
 ****/
 
 /***** Output visualized in human readable format:
-Subreddit	           2019-11-16	        2019-11-17	2019-11-18	2019-11-19
-announcements          0.863120753288006   xxxx        xxxx        xxxx
-funny    	    	   0                   xxxx        xxxx        xxxx
-AskReddit	    	   0                   xxxx        xxxx        xxxx
-gaming                 0.04144638775043721 xxxx        xxxx        xxxx
+Subreddit	           sizeRange        2019-11-16	        2019-11-17	2019-11-18	2019-11-19
+announcements          10-20 million    0.863120753288006   xxxx        xxxx        xxxx
+funny    	    	   10-20 million    0                   xxxx        xxxx        xxxx
+AskReddit	    	   10-20 million    0                   xxxx        xxxx        xxxx
+gaming                 1-2 million      0.04144638775043721 xxxx        xxxx        xxxx
 *****/
 
 const fs = require('fs');
@@ -38,16 +38,16 @@ allResultFileNames.forEach((filename) => {
 });
 
 // 3. Add data rows to CSV-compatible object
-let numberOfValidEntries = {};
+let subredditMetadata = {};
 let csvDataContainer = {};
-let csvString = "Subreddit";
+let csvString = "Subreddit,Size Range";
 
 let timestamps = Object.keys(allResultEntries);
-for(let i=0; i<timestamps.length; i++) {
+for (let i = 0; i < timestamps.length; i++) {
     let timestamp = timestamps[i];
     let priorTimestamp = undefined;
     if (i > 0) {
-        priorTimestamp = timestamps[i-1];
+        priorTimestamp = timestamps[i - 1];
     }
     csvString += ",";
     csvString += timestamp;
@@ -56,19 +56,22 @@ for(let i=0; i<timestamps.length; i++) {
         if (!csvDataContainer[timestamp]) {
             csvDataContainer[timestamp] = {};
         }
-        if (numberOfValidEntries[subreddit] === undefined) {
-            numberOfValidEntries[subreddit] = 0;
+        if (subredditMetadata[subreddit] === undefined) {
+            subredditMetadata[subreddit] = {
+                numberOfValidEntries: 0,
+                sizeRange: redditDataHelper.getFormattedSizeRange(subreddits[subreddit].subscribers)
+            };
         }
         if (subreddits[subreddit].goldenRatio !== undefined) {
-            numberOfValidEntries[subreddit] += 1;
+            subredditMetadata[subreddit].numberOfValidEntries += 1;
         }
 
         let cumulativeValue = subreddits[subreddit].goldenRatio;
         if (priorTimestamp && csvDataContainer[priorTimestamp] !== undefined && csvDataContainer[priorTimestamp][subreddit] !== undefined && subreddits[subreddit].goldenRatio !== undefined) {
-            cumulativeValue = ((numberOfValidEntries[subreddit]-1)*csvDataContainer[priorTimestamp][subreddit] + subreddits[subreddit].goldenRatio) / numberOfValidEntries[subreddit];
+            cumulativeValue = ((subredditMetadata[subreddit].numberOfValidEntries - 1) * csvDataContainer[priorTimestamp][subreddit] + subreddits[subreddit].goldenRatio) / subredditMetadata[subreddit].numberOfValidEntries;
         } else if (priorTimestamp && csvDataContainer[priorTimestamp] !== undefined && csvDataContainer[priorTimestamp][subreddit] !== undefined) {
             cumulativeValue = csvDataContainer[priorTimestamp][subreddit];
-        } 
+        }
 
         csvDataContainer[timestamp][subreddit] = cumulativeValue;
     }
@@ -79,6 +82,8 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
     let subreddit = redditDataHelper.subredditsToMeasure[i];
     csvString += "\r\n";
     csvString += subreddit;
+    csvString += ",";
+    csvString += subredditMetadata[subreddit].sizeRange;
     for (let timestamp in csvDataContainer) {
         csvString += ",";
         csvString += csvDataContainer[timestamp][subreddit];
