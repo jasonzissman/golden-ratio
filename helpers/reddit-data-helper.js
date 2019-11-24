@@ -61,7 +61,6 @@ module.exports = {
         "interestingasfuck",
         "BlackPeopleTwitter",
         "oddlysatisfying",
-        "anime",
         "nba",
         "HongKong",
         "leagueoflegends",
