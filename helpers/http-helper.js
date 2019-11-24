@@ -11,7 +11,6 @@ let _attempRequest = (params, promiseResolve, promiseReject) => {
 
         if (res.statusCode < 200 || res.statusCode >= 300) {
             _numberOpenRequests -= 1;
-
             return promiseReject(new Error('statusCode=' + res.statusCode));
         }
 
@@ -54,10 +53,14 @@ module.exports = {
         return new Promise((resolve, reject) => {
             _attempRequest(params, resolve, reject);
         }).catch(() => {
-            // Try once more if initial request failed
             logger.log("REQUEST FAILED. Reattempting HTTP request " + params.method + " " + params.host + ":" + params.port + params.path);
             return new Promise((resolve2, reject2) => {
                 _attempRequest(params, resolve2, reject2);
+            })
+        }).catch(() => {
+            logger.log("REQUEST FAILED AGAIN. Last attempt for HTTP request " + params.method + " " + params.host + ":" + params.port + params.path);
+            return new Promise((resolve3, reject3) => {
+                _attempRequest(params, resolve3, reject3);
             })
         });
     }
