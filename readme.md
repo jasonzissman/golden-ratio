@@ -15,4 +15,5 @@ To compute CSV reports off the gathered data, run one of the reports:
 3. `node result-reformatters\golden-ratio-by-day.js`
 
 # Analysis of Results
+[2019-12-01 - Top 200 Most Subscribed](published-results/2019-12-01.md)
 [2019-11-24 - Top 60 Most Subscribed](published-results/2019-11-24.md)
