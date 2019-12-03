@@ -31,6 +31,7 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
     allRequestPromises.push(httpHelper.issueHttpRequest(getPostsRequestOptions).then((subredditInfo) => {
         let posts = subredditInfo.data.children;
         output["subreddits"][subreddit]["numberGilds"] = redditDataHelper.countNumberGildsInPosts(posts);
+        output["subreddits"][subreddit]["aggregatedTitles"] = redditDataHelper.aggregateAllPostTitles(posts);
     }).catch(() => {
         logger.log("ERROR - Could not get top posts info for " + subreddit + ". Skipping...");
     }));

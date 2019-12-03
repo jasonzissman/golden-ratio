@@ -217,9 +217,16 @@ module.exports = {
         }
         return numberGilds;
     },
-
+    aggregateAllPostTitles: (posts) => {
+        let titles = "";
+        for (let j = 0; j < posts.length; j++) {
+            titles += "===";
+            titles += posts[j].data.title;
+        }
+        return titles;
+    },
     getFormattedSizeRange: (subscriberCount) => {
-        const lowerEnd = 5*Math.floor(subscriberCount/5000000);
-        return lowerEnd + "-" + (lowerEnd+5);
+        const lowerEnd = 5 * Math.floor(subscriberCount / 5000000);
+        return lowerEnd + "-" + (lowerEnd + 5);
     }
 };
