@@ -17,7 +17,8 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
 
     let subreddit = redditDataHelper.subredditsToMeasure[i];
     output["subreddits"][subreddit] = {
-        numberGilds: undefined
+        numberGilds: undefined,
+        numberGildsInComments: 0
     };
 
     // Get number of gilds on current top posts
@@ -30,8 +31,22 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
 
     allRequestPromises.push(httpHelper.issueHttpRequest(getPostsRequestOptions).then((subredditInfo) => {
         let posts = subredditInfo.data.children;
-        output["subreddits"][subreddit]["numberGilds"] = redditDataHelper.countNumberGildsInPosts(posts);
         output["subreddits"][subreddit]["aggregatedTitles"] = redditDataHelper.aggregateAllPostTitles(posts);
+        output["subreddits"][subreddit]["numberGilds"] = redditDataHelper.countNumberGildsInPosts(posts);
+        
+        // count gilds in highest upvoted 5 comments
+        const postUrls = redditDataHelper.getPostUrls(posts);
+        postUrls.forEach((postUrl) => {
+            var getPostRequestOptions = {
+                host: `www.reddit.com`,
+                method: 'GET',
+                port: 443,
+                path: encodeURI(postUrl) + ".json"
+            };
+            allRequestPromises.push(httpHelper.issueHttpRequest(getPostRequestOptions).then(postData => {
+                output["subreddits"][subreddit]["numberGildsInRootComments"] += redditDataHelper.countNumberGildsInPostComments(postData, 5);
+            }));
+        });
     }).catch(() => {
         logger.log("ERROR - Could not get top posts info for " + subreddit + ". Skipping...");
     }));

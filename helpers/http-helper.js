@@ -1,7 +1,7 @@
 const https = require("https");
 const logger = require("./log-helper");
 
-const _maxConcurrentRequests = 5;
+const _maxConcurrentRequests = 10;
 const _checkConcurrentRequestsFreq = 250;
 let _numberOpenRequests = 0;
 

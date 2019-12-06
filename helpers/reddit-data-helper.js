@@ -204,55 +204,31 @@ module.exports = {
         "educationalgifs",
         "socialskills"
     ],
-    countNumberGildsInPostsAndComments: (posts) => {
-        let numberGildsInPosts = 0;
+    getPostUrls: (posts) => {
+        let postUrls = [];
+        posts.forEach((post) => {        
+            postUrls.push(post.data.permalink);
+        });
+        return postUrls;
+    },
+    countNumberGildsInPostComments: (post, maxNumComments) => {
         let numberGildsInComments = 0;
-        for (let j = 0; j < posts.length; j++) {
-            let post = posts[j];
-            try {
-                numberGildsInPosts += Number(post.data.gilded);
-            } catch (error) {
-                console.log("Could not parse gild property. Moving along");
-            }
-            try {
-                //1. Extract post.data.url
-                //2. HTTP request against URL
-                //3. Response is array. Comments are response[1].data.children, another array
-                //4. This first children array are first generation comments, with data.gilded properties.
-                //5. Recursively, each comment item has a data.replies array which itself contains 2nd generation comments                
+        let firstGenComments = post[1].data.children;
 
-                //
-                //
-                // Example (reduced)
-                //
-                //
-
-                let responseFromPostUrl = [{
-                    // first object in array is post metadata
-                }, {
-                    // second object in array is comment data
-                    "kind": "Listing",
-                    "data": {
-                        "children": [{
-                            "gilded": "2",
-                            "replies": [
-                                // second generation comments
-                                {
-                                    "data": {
-                                        // ...
-                                    }
-                                }
-                            ]
-                        }
-                        ]
-                    }
-                }];
-            } catch (error) {
-                console.log("Could not parse gild property. Moving along");
-            }
-
+        // This first children array are first generation comments, with data.gilded properties.
+        // Recursively, each comment item has a data.replies array which itself contains 2nd generation comments                
+        if (firstGenComments && firstGenComments.length > 0) {
+            for(let i=0; i<maxNumComments && i<firstGenComments.length; i++) {
+                let comment = firstGenComments[i];         
+                try {
+                    numberGildsInComments += Number(comment.data.gilded);
+                } catch (error) {
+                    console.log("Could not parse gild property from comment. Moving along.");
+                }
+            };
         }
-        return numberGildsInPosts + numberGildsInComments;
+
+        return numberGildsInComments;
     },
     countNumberGildsInPosts: (posts) => {
         let numberGilds = 0;
@@ -261,7 +237,7 @@ module.exports = {
             try {
                 numberGilds += Number(post.data.gilded);
             } catch (error) {
-                console.log("Could not parse gild property. Moving along");
+                console.log("Could not parse gild property. Moving along.");
             }
         }
         return numberGilds;
