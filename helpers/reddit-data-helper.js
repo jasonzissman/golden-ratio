@@ -1,5 +1,4 @@
 module.exports = {
-
     subredditsToMeasure: [
         "announcements",
         "funny",
@@ -211,8 +210,8 @@ module.exports = {
         });
         return postUrls;
     },
-    countNumberGildsInPostComments: (post, maxNumComments) => {
-        let numberGildsInComments = 0;
+    countNumberGildsInPostRootComments: (post, maxNumComments) => {
+        let numberGildsInRootComments = 0;
         let firstGenComments = post[1].data.children;
 
         // This first children array are first generation comments, with data.gilded properties.
@@ -221,14 +220,14 @@ module.exports = {
             for(let i=0; i<maxNumComments && i<firstGenComments.length; i++) {
                 let comment = firstGenComments[i];         
                 try {
-                    numberGildsInComments += Number(comment.data.gilded);
+                    numberGildsInRootComments += Number(comment.data.gilded);
                 } catch (error) {
                     console.log("Could not parse gild property from comment. Moving along.");
                 }
             };
         }
 
-        return numberGildsInComments;
+        return numberGildsInRootComments;
     },
     countNumberGildsInPosts: (posts) => {
         let numberGilds = 0;

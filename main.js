@@ -18,7 +18,7 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
     let subreddit = redditDataHelper.subredditsToMeasure[i];
     output["subreddits"][subreddit] = {
         numberGilds: undefined,
-        numberGildsInComments: 0
+        numberGildsInRootComments: 0
     };
 
     // Get number of gilds on current top posts
@@ -46,7 +46,7 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
                 path: encodeURI(postUrl) + ".json"
             };
             fetchPostCommentsRequests.push(httpHelper.issueHttpRequest(getPostRequestOptions).then(postData => {
-                output["subreddits"][subreddit]["numberGildsInRootComments"] += redditDataHelper.countNumberGildsInPostComments(postData, 5);
+                output["subreddits"][subreddit]["numberGildsInRootComments"] += redditDataHelper.countNumberGildsInPostRootComments(postData, 5);
             }).catch(error => {
                 // Failed to fetch comment data... move along
             }));

@@ -1,9 +1,11 @@
 module.exports = {
     fullTimestamp: function() {
-        // 2019-11-23 16:13:30:696
+        // 2019-11-23 02:03:09:696
         let now = new Date();
-        return now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate() + 
-            " " +now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + ":" + 
+        return now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate() + " " +
+            String(now.getHours()).padStart(2, '0') + ":" + 
+            String(now.getMinutes()).padStart(2, '0') + ":" +
+            String(now.getSeconds()).padStart(2, '0') + ":" +              
             String(now.getMilliseconds()).padStart(3, '0'); 
     },
     dateOnlyTimestamp: function() {

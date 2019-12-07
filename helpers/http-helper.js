@@ -11,6 +11,7 @@ let _attempRequest = (params, promiseResolve, promiseReject) => {
 
         if (res.statusCode < 200 || res.statusCode >= 300) {
             _numberOpenRequests -= 1;
+            logger.log("Non 200 status code: " + res.statusCode)
             return promiseReject(new Error('statusCode=' + res.statusCode));
         }
 
@@ -25,6 +26,7 @@ let _attempRequest = (params, promiseResolve, promiseReject) => {
                 body = JSON.parse(Buffer.concat(body).toString());
             } catch (e) {
                 logger.log("Failed to parse JSON response");
+                logger.log(e);
                 promiseReject(e);
             }
             promiseResolve(body);
