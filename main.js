@@ -28,7 +28,7 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
         port: 443,
         path: `/r/${subreddit}/.json`
     };
-
+    
     allRequestPromises.push(httpHelper.issueHttpRequest(getPostsRequestOptions).then((subredditInfo) => {
         let posts = subredditInfo.data.children;
         output["subreddits"][subreddit]["aggregatedTitles"] = redditDataHelper.aggregateAllPostTitles(posts);
@@ -36,20 +36,26 @@ for (let i = 0; i < redditDataHelper.subredditsToMeasure.length; i++) {
         
         // count gilds in highest upvoted 5 comments
         const postUrls = redditDataHelper.getPostUrls(posts);
-        postUrls.forEach((postUrl) => {
+        let fetchPostCommentsRequests = [];
+        for(let k=0; k<postUrls.length; k++) {
+            const postUrl = postUrls[k];
             var getPostRequestOptions = {
                 host: `www.reddit.com`,
                 method: 'GET',
                 port: 443,
                 path: encodeURI(postUrl) + ".json"
             };
-            allRequestPromises.push(httpHelper.issueHttpRequest(getPostRequestOptions).then(postData => {
+            fetchPostCommentsRequests.push(httpHelper.issueHttpRequest(getPostRequestOptions).then(postData => {
                 output["subreddits"][subreddit]["numberGildsInRootComments"] += redditDataHelper.countNumberGildsInPostComments(postData, 5);
+            }).catch(error => {
+                // Failed to fetch comment data... move along
             }));
-        });
+        };
+        return Promise.all(fetchPostCommentsRequests);
     }).catch(() => {
         logger.log("ERROR - Could not get top posts info for " + subreddit + ". Skipping...");
     }));
+
 
     // Get general subreddit info
     var getSubscribersRequestOptions = {
